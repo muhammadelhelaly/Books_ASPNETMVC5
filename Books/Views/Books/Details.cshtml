@@ -1,0 +1,18 @@
+﻿@model Books.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item bg-secondary text-white font-weight-bold d-flex justify-content-between align-items-center">
+        <span>@Model.Title</span>
+        <a href="@Url.Action("Edit", "Books", new { id = Model.Id })" class="btn btn-primary">
+            <i class="icofont-ui-edit"></i>
+        </a>
+    </li>
+    <li class="list-group-item">@Model.Author</li>
+    <li class="list-group-item">@Model.Category.Name</li>
+    <li class="list-group-item">@Model.Description</li>
+    <li class="list-group-item">@Model.AddedOn</li>
+</ul>
